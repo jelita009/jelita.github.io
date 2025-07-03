@@ -1,4 +1,7 @@
-url: https://jexiee99.github.io/
+title: Jelita Anggraini
+description: Portofolio Jelita Anggraini
+url: "https://jelita009.github.io"
+baseurl: ""  # HARUS kosong untuk user site
 
 plugins:
   - jekyll-feed
