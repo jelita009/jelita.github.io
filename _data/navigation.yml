@@ -1,6 +1,6 @@
-- name: Home
+- name: Beranda
   link: / 
 - name: Friends
-  link: /friends.html
+  link: /jelita.github.io/friends.html
 - name: Blog
-  link: /blog.html
+  link: /jelita.github.io/blog.html
