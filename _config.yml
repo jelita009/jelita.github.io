@@ -1,5 +1,7 @@
 
-url: "https:/jelita009/jelita009.github.io"
+url: "https://jelita009.github.io/jelita.github.io/"
+
+github_username: jelita009
 
 plugins:
   - jekyll-feed
