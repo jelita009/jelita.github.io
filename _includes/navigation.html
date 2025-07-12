@@ -1,6 +1,6 @@
-<nav>
+<!-- <nav>
     <ul>
-      <!-- <li><a href="{{ site.baseurl }}" class="active">Beranda</a></li> -->
+      <li><a href="{{ site.baseurl }}" class="active">Beranda</a></li>
              {% for item in site.data.navigation %}
 
       <li><a href="#tentang">Tentang</a></li>
@@ -12,4 +12,41 @@
       {% endfor %}
     </ul>
   </nav>
-  
+   -->
+
+
+<nav>
+  <ul>
+    {%- comment -%}
+      Beranda — selalu ke root
+    {%- endcomment -%}
+    <li>
+      <a href="{{ '/' | relative_url }}"
+         {% if page.url == '/' %}class="current"{% endif %}>
+         BERANDA
+      </a>
+    </li>
+
+    {%- comment -%}
+      Link jangkar “Tentang” ke section dalam halaman yang sama
+    {%- endcomment -%}
+    <li><a href="#tentang">TENTANG</a></li>
+
+    {%- comment -%}
+      Daftar item dinamis dari _data/navigation.yml
+      Pastikan setiap item:  name: "Friends"
+                            link: "/friends.html"
+    {%- endcomment -%}
+    {% for item in site.data.navigation %}
+      <li>
+        <a href="{{ item.link | relative_url }}"
+           {% if page.url == item.link
+              or page.url == item.link | relative_url %}
+              class="current"
+           {% endif %}>
+          {{ item.name | upcase }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
